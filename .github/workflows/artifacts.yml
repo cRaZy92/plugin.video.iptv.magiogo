@@ -1,5 +1,5 @@
 name: Artifacts
-on: [push]
+on: [workflow_dispatch]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -9,8 +9,6 @@ jobs:
     - run: mkdir -p artifacts/plugin.video.iptv.magiogo
     - run: cp -r magio/ artifacts/plugin.video.iptv.magiogo
     - run: cp -r iptv/ artifacts/plugin.video.iptv.magiogo
-    - run: rm -r artifacts/plugin.video.iptv.magiogo/iptv/.github
-    - run: rm artifacts/plugin.video.iptv.magiogo/iptv/.git artifacts/plugin.video.iptv.magiogo/iptv/.gitignore
     - run: cp -r resources/ artifacts/plugin.video.iptv.magiogo
     - run: cp LICENSE artifacts/plugin.video.iptv.magiogo
     - run: cp icon.png artifacts/plugin.video.iptv.magiogo
